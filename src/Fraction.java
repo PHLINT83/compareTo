@@ -56,7 +56,7 @@ public class Fraction {
         setDenominator(denominator);
         System.out.println("Constructor:\t\t" + hashCode());
     }
-    public Fraction(Fraction other)
+    public Fraction(Fraction other) //конструктор класса Fraction
     {
         this.integer = other.integer;
         this.numerator = other.numerator;
@@ -107,8 +107,8 @@ public class Fraction {
                 );
         result.toProper();
         return result;*/
-        //Создаем временный безымяный объект и сразу же возвращаем его на место вызова:
-        //Временный безымяный объкт существует только в пределах одного выражения.
+        //Создаем временный безымянный объект и сразу же возвращаем его на место вызова:
+        //Временный безымянный объект существует только в пределах одного выражения.
         return new Fraction
                 (
                         left.numerator * right.numerator,
@@ -120,6 +120,25 @@ public class Fraction {
         //Division - Деление
         return Fraction.mul(l_value, r_value.inverted());
     }
+    public static Fraction compareTo(Fraction l_value, Fraction r_value)
+    //Fraction (int numerator, int denominator)
+    {
+
+        return Fraction.compareTo(l_value, r_value.inverted());//надо вернуть класс Fraction
+    }
+    public boolean equals(Object obj)
+    {
+        if (obj==null)
+            return false;
+
+        if (obj.getClass() != this.getClass() )
+            return false;
+
+        Fraction other = (Fraction) obj;
+        return this.numerator * other.denominator == this.denominator * other.numerator;
+    }
+
+
     //                Methods:
     Fraction inverted()
     {

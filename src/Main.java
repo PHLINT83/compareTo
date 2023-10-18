@@ -33,11 +33,15 @@ public class Main {
         a += b; //+= - оператор "прибавить" (к левой операнде прибавляет правую операнду)
         System.out.println(a);*/
 
-        Fraction C = Fraction.mul(A, B);
+
+
+        Fraction C = Fraction.compareTo(A, B);
         A.print();
         B.print();
         C.print();
         //System.out.println(C);
+
+
     }
 }
 
