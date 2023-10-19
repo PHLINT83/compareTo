@@ -124,7 +124,7 @@ public class Fraction {
     //Fraction (int numerator, int denominator)
     {
 
-        return Fraction.compareTo(l_value, r_value.inverted());//надо вернуть класс Fraction
+        return Fraction.compareTo(l_value.inverted(), r_value.inverted());//надо вернуть класс Fraction
     }
     public boolean equals(Object obj)
     {

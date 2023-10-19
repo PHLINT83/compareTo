@@ -35,7 +35,8 @@ public class Main {
 
 
 
-        Fraction C = Fraction.compareTo(A, B);
+        //Fraction C = Fraction.mul(A, B);
+        Fraction C = Fraction.compareTo(A.equals(B));
         A.print();
         B.print();
         C.print();
